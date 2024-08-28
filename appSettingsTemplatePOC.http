@@ -1,0 +1,6 @@
+@appSettingsTemplatePOC_HostAddress = http://localhost:5298
+
+GET {{appSettingsTemplatePOC_HostAddress}}/specialmessage/
+Accept: application/json
+
+###
