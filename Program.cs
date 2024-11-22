@@ -7,11 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Configuration
-   .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-   .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: false, reloadOnChange: true)
-   .AddEnvironmentVariables();
-
 builder.Configuration.AddAzureKeyVault(
     new Uri(builder.Configuration["KeyVault:VaultUri"]!),
     new AzureCliCredential() // You can change this to DefaultAzureCredential() if it's easier
