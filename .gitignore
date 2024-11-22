@@ -1,4 +1,7 @@
 bin/
 obj/
+.vs/
+.vscode/
 appsettings.Local.json
 appSettingsTemplatePOC.generated.sln
+appSettingsTemplatePOC.csproj.user
